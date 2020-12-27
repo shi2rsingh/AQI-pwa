@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Added for PWA-->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="theme-color" content="#db4938" />
+    <!-- Added for PWA-->
+
+
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <title>Document</title>
+    <style>
+        .m-t-1 {
+            margin-top: 1em;
+        }
+        .aqi {
+            font-size: 4em;
+            line-height: 1em;
+        }
+
+        .pm-values {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            padding: 1em;
+        }
+    </style>
+    <style>
+        body.dark {
+          --bg-color: #000;
+          --bg-secondary-color: #131316;
+          --font-color: #f5f5f5;
+          --color-grey: #ccc;
+          --color-darkGrey: #777;
+        }
+      </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-center">
+            <a class="brand">
+              AQI
+            </a>
+          </div>
+    </nav>
+    <main class="m-t-1">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="is-marginless">Air Quality Index</h3>
+                    <div class="location">Fetching Location Data...</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><span class="aqi">367</span>
+                    <div class="level">Hazardous</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="aqi-desc">
+                        Checking safety levels surrounding you.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col is-center">
+                    <div class="pm-values is-full-width">
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">PM2.5</h6>
+                        </div>
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">PM10</h6>
+                        </div>
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">SO<sub>2</sub></h6>
+                        </div>
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">NO<sub>2</sub></h6>
+                        </div>
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">O<sub>3</sub></h6>
+                        </div>
+                        <div>
+                            <h4 class="is-marginless">318.2</h4>
+                            <h6 class="is-marginless">CO</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        © Shishir Singh
+    </footer>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>
