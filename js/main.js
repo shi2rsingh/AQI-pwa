@@ -63,14 +63,15 @@ mostupdatedRecord = (weatherData) => {
         }
 
     });
-    console.log(updatedWeather);
+   // console.log(updatedWeather);
+    return updatedWeather;
 }
 
 async function showPosition(position) {
     const weatherData = await fetchAQI(position);
     if (weatherData.results) {
-        mostupdatedRecord(weatherData);
-        const weather = weatherData.results[1];
+        const weather = mostupdatedRecord(weatherData);
+        //const weather = weatherData.results[1];
         const city = weather.city
         const lastUpdated = weather.measurements[0].lastUpdated;
         const measures = new Map();
